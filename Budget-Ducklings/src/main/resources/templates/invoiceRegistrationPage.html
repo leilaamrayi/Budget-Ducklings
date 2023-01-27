@@ -1,0 +1,36 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<a href="/invoice">home</a>
+
+<h1>Invoice Registration Form</h1>
+
+<h3 th:text="'User: ' + ${user}"/>
+
+<form action="/invoice" method="POST">
+
+  <div>
+    <label>Date</label>
+    <input type="date" name="date">
+  </div>
+  <div>
+    <label>Title of payment</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" name="description">
+  </div>
+  <div>
+    <label>Category</label>
+    <input type="text" name="category">
+  </div>
+  <div>
+    <label>Price</label>
+    <input type="number" name="price">
+  </div>
+
+  <button type="submit">Register</button>
+
+</form>
+
+</html>

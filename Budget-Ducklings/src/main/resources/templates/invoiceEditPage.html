@@ -1,0 +1,38 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<a href="/invoice">home</a>
+
+<h1>Invoice Modification Form</h1>
+
+<h3 th:text="'User: ' + ${user}"/>
+
+<form action="/invoice/update" method="POST">
+
+  <div>
+    <label>Invoice ID</label>
+    <input type="text" name="invoiceId" th:value="${invoice.invoiceId}" readonly>
+  </div>
+  <div>
+    <label>Date</label>
+    <input type="date" name="date" th:value="${invoice.date}">
+  </div>
+  <div>
+    <label>Title of payment</label>
+    <input type="text" name="title" th:value="${invoice.title}">
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" name="description" th:value="${invoice.description}">
+  </div>
+  <div>
+    <label>Category</label>
+    <input type="text" name="category" th:value="${invoice.category}">
+  </div>
+  <div>
+    <label>Price</label>
+    <input type="number" name="price" th:value="${invoice.price}">
+  </div>
+
+  <button type="submit">Save</button>
+
+</form>
+</html>
